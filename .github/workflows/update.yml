@@ -1,0 +1,58 @@
+name: update-lists
+
+on:
+  schedule:
+    - cron: "23 4 * * *"   # daily, 04:23 UTC
+  workflow_dispatch:
+    inputs:
+      accept_growth:
+        description: "Accept a growth refused by the guard (only after checking the source)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-lists
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      # Actions are pinned to a commit SHA, not a movable tag
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+
+      - name: Install dig (spf and dnstxt sources)
+        run: command -v dig || { sudo apt-get update -qq && sudo apt-get install -y -qq dnsutils; }
+
+      - name: Build lists
+        id: build
+        env:
+          ACCEPT_GROWTH: ${{ inputs.accept_growth && '--accept-growth' || '' }}
+        run: python3 -I build.py $ACCEPT_GROWTH
+
+      - name: Commit when a list changed
+        run: |
+          # meta.json alone (new timestamp) is not worth a commit
+          if git diff --quiet -- lists/*.txt lists/sources/ && \
+             [ -z "$(git ls-files --others --exclude-standard lists/)" ]; then
+            git checkout -- lists/meta.json
+            echo "No list changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lists/
+          git commit -q -m "lists: update $(date -u +%F)"
+          git push
+
+      # Lists are committed first; the run then turns red so that a broken or suspicious
+      # source is noticed (GitHub notifies on failed scheduled runs).
+      - name: Fail on source warnings
+        if: steps.build.outputs.warnings != '0'
+        run: |
+          echo "::error::${{ steps.build.outputs.warnings }} source warning(s): see the Build lists step"
+          exit 1

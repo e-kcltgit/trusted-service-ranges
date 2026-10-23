@@ -1,0 +1,294 @@
+{
+  "generated_at": "2026-10-23T07:21:21Z",
+  "policy": {
+    "min_prefix": 12,
+    "max_growth_pct": 100,
+    "growth_slack": 65536,
+    "ip_version": 4
+  },
+  "categories": {
+    "web": {
+      "ports": "tcp/80,443",
+      "ranges": 1062,
+      "addresses": 601189
+    },
+    "dns": {
+      "ports": "udp+tcp/53",
+      "ranges": 83,
+      "addresses": 1579776
+    },
+    "mail": {
+      "ports": "tcp/25",
+      "ranges": 80,
+      "addresses": 837357
+    },
+    "grey": {
+      "ports": null,
+      "ranges": 3488,
+      "addresses": 105660
+    }
+  },
+  "sources": [
+    {
+      "category": "web",
+      "name": "googlebot",
+      "type": "url",
+      "status": "ok",
+      "ranges": 170,
+      "addresses": 5088,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "google-special-crawlers",
+      "type": "url",
+      "status": "ok",
+      "ranges": 136,
+      "addresses": 4352,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "google-user-fetchers",
+      "type": "url",
+      "status": "ok",
+      "ranges": 534,
+      "addresses": 17088,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "google-user-fetchers-google",
+      "type": "url",
+      "status": "ok",
+      "ranges": 252,
+      "addresses": 8064,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "bingbot",
+      "type": "url",
+      "status": "ok",
+      "ranges": 28,
+      "addresses": 4736,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "applebot",
+      "type": "url",
+      "status": "ok",
+      "ranges": 24,
+      "addresses": 4752,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "duckduckbot",
+      "type": "url",
+      "status": "ok",
+      "ranges": 486,
+      "addresses": 486,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "meta",
+      "type": "url",
+      "status": "ok",
+      "ranges": 238,
+      "addresses": 449024,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "linkedin",
+      "type": "url",
+      "status": "ok",
+      "ranges": 25,
+      "addresses": 6400,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "x-twitter",
+      "type": "url",
+      "status": "ok",
+      "ranges": 26,
+      "addresses": 25344,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "openai-gptbot",
+      "type": "url",
+      "status": "ok",
+      "ranges": 18,
+      "addresses": 2704,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "openai-chatgpt-user",
+      "type": "url",
+      "status": "ok",
+      "ranges": 234,
+      "addresses": 69264,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "openai-searchbot",
+      "type": "url",
+      "status": "ok",
+      "ranges": 39,
+      "addresses": 2560,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "perplexitybot",
+      "type": "url",
+      "status": "ok",
+      "ranges": 8,
+      "addresses": 18,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "perplexity-user",
+      "type": "url",
+      "status": "ok",
+      "ranges": 4,
+      "addresses": 14,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "anthropic",
+      "type": "static",
+      "status": "ok",
+      "ranges": 1,
+      "addresses": 2048,
+      "message": ""
+    },
+    {
+      "category": "web",
+      "name": "stripe-webhooks",
+      "type": "url",
+      "status": "ok",
+      "ranges": 15,
+      "addresses": 15,
+      "message": ""
+    },
+    {
+      "category": "dns",
+      "name": "google-public-dns",
+      "type": "dnstxt",
+      "status": "ok",
+      "ranges": 511,
+      "addresses": 55040,
+      "message": ""
+    },
+    {
+      "category": "dns",
+      "name": "cloudflare",
+      "type": "url",
+      "status": "ok",
+      "ranges": 15,
+      "addresses": 1524736,
+      "message": ""
+    },
+    {
+      "category": "mail",
+      "name": "google",
+      "type": "spf",
+      "status": "ok",
+      "ranges": 2,
+      "addresses": 98304,
+      "message": ""
+    },
+    {
+      "category": "mail",
+      "name": "microsoft-365",
+      "type": "spf",
+      "status": "ok",
+      "ranges": 6,
+      "addresses": 458752,
+      "message": ""
+    },
+    {
+      "category": "mail",
+      "name": "outlook-com",
+      "type": "spf",
+      "status": "ok",
+      "ranges": 2,
+      "addresses": 98304,
+      "message": ""
+    },
+    {
+      "category": "mail",
+      "name": "apple-icloud",
+      "type": "spf",
+      "status": "ok",
+      "ranges": 16,
+      "addresses": 279616,
+      "message": ""
+    },
+    {
+      "category": "mail",
+      "name": "orange",
+      "type": "spf",
+      "status": "ok",
+      "ranges": 27,
+      "addresses": 317,
+      "message": ""
+    },
+    {
+      "category": "mail",
+      "name": "wanadoo",
+      "type": "spf",
+      "status": "ok",
+      "ranges": 26,
+      "addresses": 316,
+      "message": ""
+    },
+    {
+      "category": "mail",
+      "name": "free",
+      "type": "spf",
+      "status": "ok",
+      "ranges": 8,
+      "addresses": 8,
+      "message": ""
+    },
+    {
+      "category": "mail",
+      "name": "sfr",
+      "type": "spf",
+      "status": "ok",
+      "ranges": 21,
+      "addresses": 291,
+      "message": ""
+    },
+    {
+      "category": "mail",
+      "name": "laposte",
+      "type": "spf",
+      "status": "ok",
+      "ranges": 4,
+      "addresses": 69,
+      "message": ""
+    },
+    {
+      "category": "grey",
+      "name": "icloud-private-relay",
+      "type": "url",
+      "status": "ok",
+      "ranges": 41747,
+      "addresses": 105660,
+      "message": ""
+    }
+  ]
+}

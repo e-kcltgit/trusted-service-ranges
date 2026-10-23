@@ -1,0 +1,26 @@
+# /etc/fail2ban/jail.d/zz-trusted-service-ranges.local
+#
+# EN  Let fail2ban ignore listed services in NOISE jails only (404 floods, .php scans, refused
+#     DNS queries, rejected recipients): a crawler, a resolver or a mail server can trigger
+#     those without attempting anything. Never add this to authentication jails (ssh, web
+#     logins, IMAP, panels…) nor to recidive: a crawler does not log in.
+#     Adapt the section names to YOUR jails. Requires the ipsets of load-ipsets.sh.
+# FR  fail2ban ignore les services listés dans les jails de BRUIT uniquement. Jamais dans les
+#     jails d'authentification ni dans recidive. Adapter les noms de sections à vos jails.
+#
+# How it works: `ipset test` exits 0 when the IP is in the set → fail2ban ignores it (no
+# "Found", no ban). If the ipset does not exist, it exits 1 → the IP is handled normally:
+# a failure falls back to normal protection, never to an opening.
+# fail2ban >= 0.10 (ignorecommand + ignorecache).
+
+[nginx-404]
+ignorecommand = /usr/sbin/ipset -q test tsr-web <ip>
+ignorecache   = key="<ip>", max-count=20000, max-time=10m
+
+[named-refused]
+ignorecommand = /usr/sbin/ipset -q test tsr-dns <ip>
+ignorecache   = key="<ip>", max-count=20000, max-time=10m
+
+[postfix-rejected-recipients]
+ignorecommand = /usr/sbin/ipset -q test tsr-mail <ip>
+ignorecache   = key="<ip>", max-count=20000, max-time=10m
