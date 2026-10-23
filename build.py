@@ -132,8 +132,12 @@ def dig_txt(name: str) -> list[str]:
     )
     if proc.returncode != 0:
         raise SourceError(f"dig failed for {name}: {proc.stderr.strip()}")
-    # dig prints one record per line as "chunk1" "chunk2": chunks are joined without separator
-    return [line.replace('" "', "").replace('"', "") for line in proc.stdout.splitlines() if line]
+    # dig prints one record per line as "chunk1" "chunk2": chunks are joined without separator.
+    # Only quoted lines are records: with +short, dig also prints diagnostics on stdout
+    # (";; communications error to 127.0.0.100#53: timed out" on GitHub runners) whose
+    # addresses must never be read as ranges.
+    return [line.replace('" "', "").replace('"', "")
+            for line in proc.stdout.splitlines() if line.startswith('"')]
 
 
 def suffix_allowed(domain: str, suffixes: list[str]) -> bool:
