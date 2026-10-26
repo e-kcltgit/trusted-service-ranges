@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T08:57:55Z",
+  "generated_at": "2026-10-26T10:18:11Z",
   "policy": {
     "min_prefix": 12,
     "max_growth_pct": 100,
@@ -24,8 +24,8 @@
     },
     "grey": {
       "ports": null,
-      "ranges": 3488,
-      "addresses": 105660
+      "ranges": 3490,
+      "addresses": 105681
     }
   },
   "sources": [
@@ -267,10 +267,10 @@
       "category": "mail",
       "name": "sfr",
       "type": "spf",
-      "status": "kept-previous",
+      "status": "ok",
       "ranges": 21,
       "addresses": 291,
-      "message": "no SPF record for sfr.fr"
+      "message": ""
     },
     {
       "category": "mail",
@@ -286,8 +286,8 @@
       "name": "icloud-private-relay",
       "type": "url",
       "status": "ok",
-      "ranges": 41747,
-      "addresses": 105660,
+      "ranges": 41768,
+      "addresses": 105681,
       "message": ""
     }
   ]
