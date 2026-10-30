@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T10:58:29Z",
+  "generated_at": "2026-10-30T10:55:57Z",
   "policy": {
     "min_prefix": 12,
     "max_growth_pct": 100,
@@ -187,7 +187,7 @@
       "name": "google-public-dns",
       "type": "dnstxt",
       "status": "ok",
-      "ranges": 511,
+      "ranges": 512,
       "addresses": 55040,
       "message": ""
     },
