@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T10:28:22Z",
+  "generated_at": "2026-11-03T12:05:38Z",
   "policy": {
     "min_prefix": 12,
     "max_growth_pct": 100,
@@ -97,7 +97,7 @@
       "name": "meta",
       "type": "url",
       "status": "ok",
-      "ranges": 236,
+      "ranges": 235,
       "addresses": 449024,
       "message": ""
     },
