@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T12:33:15Z",
+  "generated_at": "2026-11-06T12:16:18Z",
   "policy": {
     "min_prefix": 12,
     "max_growth_pct": 100,
@@ -9,13 +9,13 @@
   "categories": {
     "web": {
       "ports": "tcp/80,443",
-      "ranges": 1060,
-      "addresses": 601196
+      "ranges": 1066,
+      "addresses": 601532
     },
     "dns": {
       "ports": "udp+tcp/53",
-      "ranges": 83,
-      "addresses": 1579776
+      "ranges": 84,
+      "addresses": 1580032
     },
     "mail": {
       "ports": "tcp/25",
@@ -52,8 +52,8 @@
       "name": "google-user-fetchers",
       "type": "url",
       "status": "ok",
-      "ranges": 534,
-      "addresses": 17088,
+      "ranges": 544,
+      "addresses": 17408,
       "message": ""
     },
     {
@@ -70,8 +70,8 @@
       "name": "bingbot",
       "type": "url",
       "status": "ok",
-      "ranges": 28,
-      "addresses": 4736,
+      "ranges": 29,
+      "addresses": 4752,
       "message": ""
     },
     {
@@ -97,7 +97,7 @@
       "name": "meta",
       "type": "url",
       "status": "ok",
-      "ranges": 236,
+      "ranges": 237,
       "addresses": 449024,
       "message": ""
     },
@@ -187,8 +187,8 @@
       "name": "google-public-dns",
       "type": "dnstxt",
       "status": "ok",
-      "ranges": 512,
-      "addresses": 55040,
+      "ranges": 513,
+      "addresses": 55296,
       "message": ""
     },
     {
