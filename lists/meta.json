@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T11:11:53Z",
+  "generated_at": "2026-11-09T13:04:28Z",
   "policy": {
     "min_prefix": 12,
     "max_growth_pct": 100,
@@ -24,8 +24,8 @@
     },
     "grey": {
       "ports": null,
-      "ranges": 3490,
-      "addresses": 105681
+      "ranges": 3438,
+      "addresses": 105727
     }
   },
   "sources": [
@@ -286,8 +286,8 @@
       "name": "icloud-private-relay",
       "type": "url",
       "status": "ok",
-      "ranges": 41768,
-      "addresses": 105681,
+      "ranges": 41814,
+      "addresses": 105727,
       "message": ""
     }
   ]
