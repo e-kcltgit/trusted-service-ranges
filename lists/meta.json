@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T13:39:01Z",
+  "generated_at": "2026-11-18T13:13:38Z",
   "policy": {
     "min_prefix": 12,
     "max_growth_pct": 100,
@@ -9,8 +9,8 @@
   "categories": {
     "web": {
       "ports": "tcp/80,443",
-      "ranges": 1067,
-      "addresses": 601564
+      "ranges": 1068,
+      "addresses": 601820
     },
     "dns": {
       "ports": "udp+tcp/53",
@@ -106,8 +106,8 @@
       "name": "linkedin",
       "type": "url",
       "status": "ok",
-      "ranges": 25,
-      "addresses": 6400,
+      "ranges": 26,
+      "addresses": 6656,
       "message": ""
     },
     {
