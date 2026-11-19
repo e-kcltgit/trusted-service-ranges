@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T13:13:38Z",
+  "generated_at": "2026-11-19T13:32:35Z",
   "policy": {
     "min_prefix": 12,
     "max_growth_pct": 100,
@@ -9,8 +9,8 @@
   "categories": {
     "web": {
       "ports": "tcp/80,443",
-      "ranges": 1068,
-      "addresses": 601820
+      "ranges": 1067,
+      "addresses": 601060
     },
     "dns": {
       "ports": "udp+tcp/53",
@@ -24,8 +24,8 @@
     },
     "grey": {
       "ports": null,
-      "ranges": 3414,
-      "addresses": 105744
+      "ranges": 3383,
+      "addresses": 105769
     }
   },
   "sources": [
@@ -106,8 +106,8 @@
       "name": "linkedin",
       "type": "url",
       "status": "ok",
-      "ranges": 26,
-      "addresses": 6656,
+      "ranges": 23,
+      "addresses": 5888,
       "message": ""
     },
     {
@@ -151,8 +151,8 @@
       "name": "perplexitybot",
       "type": "url",
       "status": "ok",
-      "ranges": 13,
-      "addresses": 13,
+      "ranges": 21,
+      "addresses": 21,
       "message": ""
     },
     {
@@ -187,7 +187,7 @@
       "name": "google-public-dns",
       "type": "dnstxt",
       "status": "ok",
-      "ranges": 514,
+      "ranges": 516,
       "addresses": 55296,
       "message": ""
     },
@@ -286,8 +286,8 @@
       "name": "icloud-private-relay",
       "type": "url",
       "status": "ok",
-      "ranges": 41831,
-      "addresses": 105744,
+      "ranges": 41856,
+      "addresses": 105769,
       "message": ""
     }
   ]
