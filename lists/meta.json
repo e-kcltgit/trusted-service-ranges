@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T13:32:35Z",
+  "generated_at": "2026-11-20T13:13:54Z",
   "policy": {
     "min_prefix": 12,
     "max_growth_pct": 100,
@@ -24,8 +24,8 @@
     },
     "grey": {
       "ports": null,
-      "ranges": 3383,
-      "addresses": 105769
+      "ranges": 3368,
+      "addresses": 105776
     }
   },
   "sources": [
@@ -97,7 +97,7 @@
       "name": "meta",
       "type": "url",
       "status": "ok",
-      "ranges": 234,
+      "ranges": 239,
       "addresses": 449024,
       "message": ""
     },
@@ -286,8 +286,8 @@
       "name": "icloud-private-relay",
       "type": "url",
       "status": "ok",
-      "ranges": 41856,
-      "addresses": 105769,
+      "ranges": 41863,
+      "addresses": 105776,
       "message": ""
     }
   ]
