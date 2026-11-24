@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T13:13:54Z",
+  "generated_at": "2026-11-24T14:59:59Z",
   "policy": {
     "min_prefix": 12,
     "max_growth_pct": 100,
@@ -9,8 +9,8 @@
   "categories": {
     "web": {
       "ports": "tcp/80,443",
-      "ranges": 1067,
-      "addresses": 601060
+      "ranges": 1068,
+      "addresses": 601188
     },
     "dns": {
       "ports": "udp+tcp/53",
@@ -52,8 +52,8 @@
       "name": "google-user-fetchers",
       "type": "url",
       "status": "ok",
-      "ranges": 544,
-      "addresses": 17408,
+      "ranges": 548,
+      "addresses": 17536,
       "message": ""
     },
     {
