@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T14:59:59Z",
+  "generated_at": "2026-11-25T14:39:10Z",
   "policy": {
     "min_prefix": 12,
     "max_growth_pct": 100,
@@ -9,8 +9,8 @@
   "categories": {
     "web": {
       "ports": "tcp/80,443",
-      "ranges": 1068,
-      "addresses": 601188
+      "ranges": 1183,
+      "addresses": 603268
     },
     "dns": {
       "ports": "udp+tcp/53",
@@ -133,8 +133,8 @@
       "name": "openai-chatgpt-user",
       "type": "url",
       "status": "ok",
-      "ranges": 237,
-      "addresses": 69312,
+      "ranges": 367,
+      "addresses": 71392,
       "message": ""
     },
     {
